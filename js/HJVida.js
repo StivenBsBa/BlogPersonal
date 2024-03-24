@@ -1,9 +1,12 @@
-document.getElementById("descargarBtn").addEventListener("click", function() {
-    // URL del archivo PDF que deseas descargar
-    var pdfUrl = "/js/Brayan.pdf";
+document.getElementById("descargarLink").addEventListener("click", function(event) {
+    // Evita el comportamiento predeterminado del enlace
+    event.preventDefault();
+
+    // URL del archivo PDF en Google Drive
+    var pdfUrl = this.getAttribute("href");
     
-    // Nombre del archivo PDF
-    var pdfNombre = "Hola de vida Brayan.pdf";
+    // Nombre del archivo PDF (puedes configurarlo si deseas)
+    var pdfNombre = "documento.pdf";
 
     // Crea un enlace temporal
     var a = document.createElement("a");
