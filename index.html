@@ -1,431 +1,234 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-    <meta charset="utf-8">
-    <title>Mi Blog</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description">
+  <meta charset="utf-8">
+  <title>Mi Blog</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="Plantillas HTML gratuitas" name="keywords">
+  <meta content="Plantillas HTML gratuitas" name="description">
 
+  <!-- Fuentes de Google -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
 
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <!-- Hojas de estilo de las librerías -->
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
-    <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+  <!-- Hoja de estilo personalizada de Bootstrap -->
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="51">
-    <!-- Navbar Start -->
-    <nav class="navbar fixed-top shadow-sm navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
-        <a href="index.html" class="navbar-brand ml-lg-3">
-            <h1 class="m-0 display-5"><span class="text-primary">Free</span>Folio</h1>
-        </a>
-        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse px-lg-3" id="navbarCollapse">
-            <div class="navbar-nav m-auto py-0">
-                <a href="#home" class="nav-item nav-link active">Home</a>
-                <a href="#about" class="nav-item nav-link">About</a>
-                <a href="#qualification" class="nav-item nav-link">Quality</a>
-                <a href="#skill" class="nav-item nav-link">Skill</a>
-                <a href="#service" class="nav-item nav-link">Service</a>
-                <a href="#portfolio" class="nav-item nav-link">Portfolio</a>
-                <a href="#testimonial" class="nav-item nav-link">Review</a>
-                <a href="#blog" class="nav-item nav-link">Blog</a>
-                <a href="#contact" class="nav-item nav-link">Contact</a>
-            </div>
-            <a href="" class="btn btn-outline-primary d-none d-lg-block">Hire Me</a>
-        </div>
-    </nav>
-    <!-- Navbar End -->
-
-
-    <!-- Video Modal Start -->
-    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    <!-- 16:9 aspect ratio -->
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="" id="video" allowscriptaccess="always"
-                            allow="autoplay"></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      <h1><span>Blog </span>Profesional</h1>
+    </a>
+  
+    <div class="menu-toggle">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
     </div>
-    <!-- Video Modal End -->
+    
+    <ul class="nav-links">
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#AcercaDeMi">Acerca de</a></li>
+      <li><a href="#qualification">Educación & Experiencia</a></li>
+      <li><a href="#miHabilidades">Habilidad</a></li>
+      <li><a href="#Portafolio">Portafolio</a></li>
+    </ul>
+  </nav>
+  
 
-
-    <!-- Header Start -->
-    <div class="container-fluid bg-primary d-flex align-items-center mb-5 py-5" id="home" style="min-height: 100vh;">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-5 px-5 pl-lg-0 pb-5 pb-lg-0">
-                    <img class="img-fluid w-100 rounded-circle shadow-sm" src="img/profile.jpg" alt="">
-                </div>
-                <div class="col-lg-7 text-center text-lg-left">
-                    <h3 class="text-white font-weight-normal mb-3">Soy</h3>
-                    <h1 class="display-3 text-uppercase text-primary mb-2" style="-webkit-text-stroke: 2px #ffffff;">
-                        Brayan Stiven Barajas Ariza</h1>
-                    <h1 class="typed-text-output d-inline font-weight-lighter text-white"></h1>
-                    <div class="typed-text d-none">Web Designer, Web Developer, Front End Developer, Apps Designer, Apps
-                        Developer</div>
-                    <div class="d-flex align-items-center justify-content-center justify-content-lg-start pt-5">
-                        <a href="./Cv/Cv Brayan.pdf" download class="btn btn-outline-light mr-5">Descargar CV</a>
-                    </div>
-                </div>
-            </div>
+  <!-- Encabezado -->
+  <div class="header-container">
+    <div class="header-content">
+      <div>
+        <img src="img/profile.jpg" alt="Foto de perfil" class="profile-img">
+      </div>
+      <div>
+        <h3>Bienvenido a mi blog</h3>
+        <h1>Brayan Stiven Barajas Ariza</h1>
+        <div class="additional-info">
+          <div>Diseñador Web, Desarrollador Web, Desarrollador Front End, Diseñador de Aplicaciones, Desarrollador de
+            Aplicaciones</div>
+          <div>
+            <a href="./Cv/Cv Brayan.pdf" class="download-link" download>Descargar CV</a>
+          </div>
         </div>
+      </div>
     </div>
-    <!-- Header End -->
+  </div>
+  <!-- Fin del Encabezado -->
 
 
-    <!-- About Start -->
-    <div class="container-fluid py-5" id="about">
-        <div class="container">
-            <div class="position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">About</h1>
-                <h1 class="position-absolute text-uppercase text-primary">About Me</h1>
-            </div>
-            <div class="row align-items-center">
-                <div class="col-lg-5 pb-4 pb-lg-0">
-                    <img class="img-fluid rounded w-100" src="img/about.jpg" alt="">
-                </div>
-                <div class="col-lg-7">
-                    <h3 class="mb-4">UI/UX Designer & Web Developer</h3>
-                    <p>Tempor eos dolore amet tempor dolor tempor. Dolore ea magna sit amet dolor eirmod. Eos ipsum est
-                        tempor dolor. Clita lorem kasd sed ea lorem diam ea lorem eirmod duo sit ipsum. Amet dolor stet
-                        lorem diam dolor justo et dolor dolor dolor</p>
-                    <div class="row mb-3">
-                        <div class="col-sm-6 py-2">
-                            <h6>Name: <span class="text-secondary">Kate Winslet</span></h6>
-                        </div>
-                        <div class="col-sm-6 py-2">
-                            <h6>Birthday: <span class="text-secondary">1 April 1990</span></h6>
-                        </div>
-                        <div class="col-sm-6 py-2">
-                            <h6>Degree: <span class="text-secondary">Master</span></h6>
-                        </div>
-                        <div class="col-sm-6 py-2">
-                            <h6>Experience: <span class="text-secondary">10 Years</span></h6>
-                        </div>
-                        <div class="col-sm-6 py-2">
-                            <h6>Phone: <span class="text-secondary">+012 345 6789</span></h6>
-                        </div>
-                        <div class="col-sm-6 py-2">
-                            <h6>Email: <span class="text-secondary">info@example.com</span></h6>
-                        </div>
-                        <div class="col-sm-6 py-2">
-                            <h6>Address: <span class="text-secondary">123 Street, New York, USA</span></h6>
-                        </div>
-                        <div class="col-sm-6 py-2">
-                            <h6>Freelance: <span class="text-secondary">Available</span></h6>
-                        </div>
-                    </div>
-                    <a href="" class="btn btn-outline-primary mr-4">Hire Me</a>
-                    <a href="" class="btn btn-outline-primary">Learn More</a>
-                </div>
-            </div>
+  <!-- Acerca de -->
+  <div class="about-container" id="AcercaDeMi">
+    <div>
+      <h1>Acerca de mí</h1>
+    </div>
+    <div class="about-content">
+      <div>
+        <img src="img/about.jpg" alt="Imagen Acerca de">
+      </div>
+      <div>
+        <h3>Diseñador UI/UX y desarrollador web</h3>
+        <p>Tempor eos dolore amet tempor dolor tempor. Dolore ea magna sit amet dolor eirmod. Eos ipsum est tempor
+          dolor. Clita lorem kasd sed ea lorem diam ea lorem eirmod duo sit ipsum. Amet dolor stet lorem diam dolor
+          justo et dolor dolor dolor</p>
+        <div>
+          <div>
+            <h6>Nombre: Brayan Stiven Barajas Ariza</h6>
+          </div>
+          <div>
+            <h6>Ocupación: Estudiante</h6>
+          </div>
+          <div>
+            <h6>Experiencia: 0 Años</h6>
+          </div>
+          <div>
+            <h6>Teléfono: +012 345 6789</h6>
+          </div>
+          <div>
+            <h6>Email: info@example.com</h6>
+          </div>
         </div>
+        <a href="#">Más Información</a>
+      </div>
     </div>
-    <!-- About End -->
+  </div>
+  <!-- Fin Acerca de -->
 
 
-    <!-- Qualification Start -->
-    <div class="container-fluid py-5" id="qualification">
-        <div class="container">
-            <div class="position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Quality</h1>
-                <h1 class="position-absolute text-uppercase text-primary">Education & Expericence</h1>
-            </div>
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <h3 class="mb-4">My Education</h3>
-                    <div class="border-left border-primary pt-2 pl-4 ml-2">
-                        <div class="position-relative mb-4">
-                            <i class="far fa-dot-circle text-primary position-absolute"
-                                style="top: 2px; left: -32px;"></i>
-                            <h5 class="font-weight-bold mb-1">Master In CSE</h5>
-                            <p class="mb-2"><strong>Cambridge University</strong> | <small>2000 - 2050</small></p>
-                            <p>Tempor eos dolore amet tempor dolor tempor. Dolore ea magna sit amet dolor eirmod. Eos
-                                ipsum est tempor dolor. Clita lorem kasd sed ea lorem diam ea lorem eirmod duo sit ipsum
-                                stet lorem diam</p>
-                        </div>
-                        <div class="position-relative mb-4">
-                            <i class="far fa-dot-circle text-primary position-absolute"
-                                style="top: 2px; left: -32px;"></i>
-                            <h5 class="font-weight-bold mb-1">Master In CSE</h5>
-                            <p class="mb-2"><strong>Cambridge University</strong> | <small>2000 - 2050</small></p>
-                            <p>Tempor eos dolore amet tempor dolor tempor. Dolore ea magna sit amet dolor eirmod. Eos
-                                ipsum est tempor dolor. Clita lorem kasd sed ea lorem diam ea lorem eirmod duo sit ipsum
-                                stet lorem diam</p>
-                        </div>
-                        <div class="position-relative mb-4">
-                            <i class="far fa-dot-circle text-primary position-absolute"
-                                style="top: 2px; left: -32px;"></i>
-                            <h5 class="font-weight-bold mb-1">Master In CSE</h5>
-                            <p class="mb-2"><strong>Cambridge University</strong> | <small>2000 - 2050</small></p>
-                            <p>Tempor eos dolore amet tempor dolor tempor. Dolore ea magna sit amet dolor eirmod. Eos
-                                ipsum est tempor dolor. Clita lorem kasd sed ea lorem diam ea lorem eirmod duo sit ipsum
-                                stet lorem diam</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <h3 class="mb-4">My Expericence</h3>
-                    <div class="border-left border-primary pt-2 pl-4 ml-2">
-                        <div class="position-relative mb-4">
-                            <i class="far fa-dot-circle text-primary position-absolute"
-                                style="top: 2px; left: -32px;"></i>
-                            <h5 class="font-weight-bold mb-1">Web Designer</h5>
-                            <p class="mb-2"><strong>Soft Company</strong> | <small>2000 - 2050</small></p>
-                            <p>Tempor eos dolore amet tempor dolor tempor. Dolore ea magna sit amet dolor eirmod. Eos
-                                ipsum est tempor dolor. Clita lorem kasd sed ea lorem diam ea lorem eirmod duo sit ipsum
-                                stet lorem diam</p>
-                        </div>
-                        <div class="position-relative mb-4">
-                            <i class="far fa-dot-circle text-primary position-absolute"
-                                style="top: 2px; left: -32px;"></i>
-                            <h5 class="font-weight-bold mb-1">Web Designer</h5>
-                            <p class="mb-2"><strong>Soft Company</strong> | <small>2000 - 2050</small></p>
-                            <p>Tempor eos dolore amet tempor dolor tempor. Dolore ea magna sit amet dolor eirmod. Eos
-                                ipsum est tempor dolor. Clita lorem kasd sed ea lorem diam ea lorem eirmod duo sit ipsum
-                                stet lorem diam</p>
-                        </div>
-                        <div class="position-relative mb-4">
-                            <i class="far fa-dot-circle text-primary position-absolute"
-                                style="top: 2px; left: -32px;"></i>
-                            <h5 class="font-weight-bold mb-1">Web Designer</h5>
-                            <p class="mb-2"><strong>Soft Company</strong> | <small>2000 - 2050</small></p>
-                            <p>Tempor eos dolore amet tempor dolor tempor. Dolore ea magna sit amet dolor eirmod. Eos
-                                ipsum est tempor dolor. Clita lorem kasd sed ea lorem diam ea lorem eirmod duo sit ipsum
-                                stet lorem diam</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <!-- Educacion y experiencia -->
+  <div class="quality-container" id="qualification">
+    <div>
+      <h1>Educación & Experiencia</h1>
+    </div>
+    <div class="education-experience">
+      <div class="education">
+        <h3>Mi Educación</h3>
+        <div class="education-list">
+          <div>
+            <i class="fas fa-graduation-cap"></i>
+            <h5>Ingeniería de Sistemas</h5>
+            <p><strong>Universidad / Carrera Profesional</strong> | <small>2021 - 2025</small></p>
+            <p><strong>Corporación Universitaria Adventista</strong> | <small>Medellín</small></p>
+            <p>Tempor eos dolore amet tempor dolor tempor. Dolore ea magna sit amet dolor eirmod. Eos ipsum est tempor
+              dolor. Clita lorem kasd sed ea lorem diam ea lorem eirmod duo sit ipsum stet lorem diam</p>
+          </div>
+          <!-- Más entradas de educación aquí -->
         </div>
-    </div>
-    <!-- Qualification End -->
-
-
-    <!-- Skill Start -->
-    <div class="container-fluid py-5" id="skill">
-        <div class="container">
-            <div class="position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Skills</h1>
-                <h1 class="position-absolute text-uppercase text-primary">My Skills</h1>
-            </div>
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">HTML</h6>
-                            <h6 class="font-weight-bold">95%</h6>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="95" aria-valuemin="0"
-                                aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">CSS</h6>
-                            <h6 class="font-weight-bold">85%</h6>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="85" aria-valuemin="0"
-                                aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">PHP</h6>
-                            <h6 class="font-weight-bold">90%</h6>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0"
-                                aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">Javascript</h6>
-                            <h6 class="font-weight-bold">90%</h6>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0"
-                                aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">Angular JS</h6>
-                            <h6 class="font-weight-bold">95%</h6>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-dark" role="progressbar" aria-valuenow="95" aria-valuemin="0"
-                                aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">Wordpress</h6>
-                            <h6 class="font-weight-bold">85%</h6>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-info" role="progressbar" aria-valuenow="85" aria-valuemin="0"
-                                aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      </div>
+      <div class="experience">
+        <h3>Mi Experiencia</h3>
+        <div class="experience-list">
+          <div>
+            <i class="fas fa-briefcase"></i>
+            <h5>Diseñador Web</h5>
+            <p><strong>Soft Company</strong> | <small>2000 - 2050</small></p>
+            <p>Tempor eos dolore amet tempor dolor tempor. Dolore ea magna sit amet dolor eirmod. Eos ipsum est tempor
+              dolor. Clita lorem kasd sed ea lorem diam ea lorem eirmod duo sit ipsum stet lorem diam</p>
+          </div>
+          <!-- Más entradas de experiencia aquí -->
         </div>
+      </div>
     </div>
-    <!-- Skill End -->
+  </div>
+  <!-- Fin Calidad -->
 
 
-    <!-- Services Start -->
-    <div class="container-fluid pt-5" id="service">
-        <div class="container">
-            <div class="position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Service</h1>
-                <h1 class="position-absolute text-uppercase text-primary">My Services</h1>
-            </div>
-            <div class="row pb-3">
-                <div class="col-lg-4 col-md-6 text-center mb-5">
-                    <div class="d-flex align-items-center justify-content-center mb-4">
-                        <i class="fa fa-2x fa-laptop service-icon bg-primary text-white mr-3"></i>
-                        <h4 class="font-weight-bold m-0">Web Design</h4>
-                    </div>
-                    <p>Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem lorem lorem est amet
-                        labore eirmod erat clita</p>
-                    <a class="border-bottom border-primary text-decoration-none" href="">Read More</a>
-                </div>
-                <div class="col-lg-4 col-md-6 text-center mb-5">
-                    <div class="d-flex align-items-center justify-content-center mb-4">
-                        <i class="fa fa-2x fa-laptop-code service-icon bg-primary text-white mr-3"></i>
-                        <h4 class="font-weight-bold m-0">Web Development</h4>
-                    </div>
-                    <p>Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem lorem lorem est amet
-                        labore eirmod erat clita</p>
-                    <a class="border-bottom border-primary text-decoration-none" href="">Read More</a>
-                </div>
-                <div class="col-lg-4 col-md-6 text-center mb-5">
-                    <div class="d-flex align-items-center justify-content-center mb-4">
-                        <i class="fab fa-2x fa-android service-icon bg-primary text-white mr-3"></i>
-                        <h4 class="font-weight-bold m-0">Apps Design</h4>
-                    </div>
-                    <p>Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem lorem lorem est amet
-                        labore eirmod erat clita</p>
-                    <a class="border-bottom border-primary text-decoration-none" href="">Read More</a>
-                </div>
-                <div class="col-lg-4 col-md-6 text-center mb-5">
-                    <div class="d-flex align-items-center justify-content-center mb-4">
-                        <i class="fab fa-2x fa-apple service-icon bg-primary text-white mr-3"></i>
-                        <h4 class="font-weight-bold m-0">Apps Development</h4>
-                    </div>
-                    <p>Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem lorem lorem est amet
-                        labore eirmod erat clita</p>
-                    <a class="border-bottom border-primary text-decoration-none" href="">Read More</a>
-                </div>
-                <div class="col-lg-4 col-md-6 text-center mb-5">
-                    <div class="d-flex align-items-center justify-content-center mb-4">
-                        <i class="fa fa-2x fa-search service-icon bg-primary text-white mr-3"></i>
-                        <h4 class="font-weight-bold m-0">SEO</h4>
-                    </div>
-                    <p>Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem lorem lorem est amet
-                        labore eirmod erat clita</p>
-                    <a class="border-bottom border-primary text-decoration-none" href="">Read More</a>
-                </div>
-                <div class="col-lg-4 col-md-6 text-center mb-5">
-                    <div class="d-flex align-items-center justify-content-center mb-4">
-                        <i class="fa fa-2x fa-edit service-icon bg-primary text-white mr-3"></i>
-                        <h4 class="font-weight-bold m-0">Content Creating</h4>
-                    </div>
-                    <p>Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem lorem lorem est amet
-                        labore eirmod erat clita</p>
-                    <a class="border-bottom border-primary text-decoration-none" href="">Read More</a>
-                </div>
-            </div>
-        </div>
+
+<!-- Certificaciones y Cursos -->
+<div class="certificates-container">
+  <div>
+    <h1>Certificaciones y Cursos</h1>
+  </div>
+  <div class="certificate-list">
+    <div>
+      <h3>Nombre del Certificado o Curso</h3>
+      <p><strong>Institución:</strong> Nombre de la Institución | <small>Año de Obtención</small></p>
+      <p>Descripción breve del certificado o curso y su relevancia.</p>
     </div>
-    <!-- Services End -->
+    <!-- Más certificados y cursos aquí -->
+  </div>
+</div>
+<!-- Fin Certificaciones y Cursos -->
 
 
 
 
+  
 
-
-
-
-
-    <!-- Footer Start -->
-    <div class="container-fluid bg-primary text-white mt-5 py-5 px-sm-3 px-md-5">
-        <div class="container text-center py-5">
-            <div class="d-flex justify-content-center mb-4">
-                <a class="btn btn-light btn-social mr-2" href="#"><i class="fab fa-twitter"></i></a>
-                <a class="btn btn-light btn-social mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                <a class="btn btn-light btn-social mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a class="btn btn-light btn-social" href="#"><i class="fab fa-instagram"></i></a>
-            </div>
-            <div class="d-flex justify-content-center mb-3">
-                <a class="text-white" href="#">Privacy</a>
-                <span class="px-3">|</span>
-                <a class="text-white" href="#">Terms</a>
-                <span class="px-3">|</span>
-                <a class="text-white" href="#">FAQs</a>
-                <span class="px-3">|</span>
-                <a class="text-white" href="#">Help</a>
-            </div>
-            <p class="m-0">&copy; <a class="text-white font-weight-bold" href="#">Domain Name</a>. All Rights Reserved.
-                Designed by <a class="text-white font-weight-bold" href="https://htmlcodex.com">HTML Codex</a>
-            </p>
-        </div>
+  <!-- Habilidades -->
+  <div class="skills-container" id="miHabilidades">
+    <div>
+      <h1>Mis Habilidades</h1>
     </div>
-    <!-- Footer End -->
+    <div class="skills-list" id="skillsList">
+      <!-- Las habilidades se generarán dinámicamente aquí -->
+    </div>
+  </div>
+  <script src="./js/skill.js"></script>
+  <!-- Fin Habilidades -->
 
-    <!-- Scroll to Bottom -->
-    <i class="fa fa-2x fa-angle-down text-white scroll-to-bottom"></i>
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-outline-dark px-0 back-to-top"><i class="fa fa-angle-double-up"></i></a>
+  <!-- Portafolio -->
+  <div class="container" id="Portafolio">
+    <h1 class="section-title">Portafolio</h1>
+
+    <!-- Primer servicio -->
+    <div class="project">
+      <div><i class="fas fa-laptop-code project-icon"></i></div>
+      <h2 class="project-title">Diseño y Desarrollo Web</h2>
+      <p class="project-description">Diseño y desarrollo de sitios web modernos y receptivos utilizando las últimas
+        tecnologías y mejores prácticas.</p>
+      <a href="#" class="read-more">Leer más</a>
+    </div>
+
+    <!-- Segundo servicio -->
+    <div class="project">
+      <div><i class="fas fa-mobile-alt project-icon"></i></div>
+      <h2 class="project-title">Diseño de Aplicaciones Móviles</h2>
+      <p class="project-description">Diseño de aplicaciones móviles atractivas y fáciles de usar para Android e iOS.</p>
+      <a href="#" class="read-more">Leer más</a>
+    </div>
+
+    <!-- Tercer servicio -->
+    <div class="project">
+      <div><i class="fas fa-palette project-icon"></i></div>
+      <h2 class="project-title">Diseño Gráfico</h2>
+      <p class="project-description">Servicios de diseño gráfico que incluyen diseño de logotipos, materiales
+        promocionales y más.</p>
+      <a href="#" class="read-more">Leer más</a>
+    </div>
+  </div>
+  <!-- Fin de Servicios -->
 
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/typed/typed.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/isotope/isotope.pkgd.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
+  <!-- Pie de página -->
+  <footer class="footer">
+    <div class="social-links">
+      <a href="https://www.facebook.com/brayan.barajas.31/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.instagram.com/stiven.ba/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/brayan-stiven-barajas-ariza-9ab79b235/" target="_blank"><i
+          class="fab fa-linkedin-in"></i></a>
+    </div>
 
-    <!-- Contact Javascript File -->
-    <script src="mail/jqBootstrapValidation.min.js"></script>
-    <script src="mail/contact.js"></script>
+    <div class="footer-info">
+      <p>&copy; <a href="#" class="font-weight-bold">Domain Name</a>. All Rights Reserved. Designed by <a href="https://htmlcodex.com" class="font-weight-bold">HTML Codex</a></p>
+    </div>
+  </footer>
+  
+  <!-- Footer End -->
 
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+
 </body>
 
 </html>
