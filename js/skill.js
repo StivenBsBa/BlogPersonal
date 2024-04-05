@@ -1,39 +1,3 @@
-// Habilidades y porcentajes
-const skillsMap = new Map([
-  ['HTML y CSS', 80],
-  ['React', 90],
-  ['Node.js', 40],
-  ['Javascript', 60],
-  ['Java', 40],
-  ['Python', 60]
-]);
-
-// Obtener el contenedor de la lista de habilidades
-const skillsListContainer = document.getElementById('skillsList');
-
-// Generar la lista de habilidades dinámicamente
-skillsMap.forEach((percentage, skill) => {
-  const skillElement = document.createElement('div');
-  skillElement.classList.add('skill');
-
-  const skillNameElement = document.createElement('h6');
-  skillNameElement.textContent = skill;
-
-  const progressBarElement = document.createElement('div');
-  progressBarElement.classList.add('progress-bar');
-
-  const progressElement = document.createElement('div');
-  progressElement.classList.add('progress');
-  progressElement.textContent = `${percentage}%`;
-  progressElement.style.width = `${percentage}%`;
-
-  progressBarElement.appendChild(progressElement);
-  skillElement.appendChild(skillNameElement);
-  skillElement.appendChild(progressBarElement);
-  skillsListContainer.appendChild(skillElement);
-});
-
-
 document.addEventListener("DOMContentLoaded", function() {
   const menuToggle = document.querySelector('.menu-toggle');
   const navLinks = document.querySelector('.nav-links');
@@ -50,5 +14,73 @@ document.addEventListener("DOMContentLoaded", function() {
       navLinks.classList.remove('active');
       menuToggle.classList.remove('active');
     });
+
+    // Verificar si el texto del enlace excede el ancho del contenedor
+    if (item.offsetWidth > navLinks.offsetWidth) {
+      item.style.display = 'none';
+    }
   });
 });
+
+
+
+
+
+//certificados
+const certificates = [
+  {
+    name: "DESARROLLO DE APLICACIONES CON MANEJO DE DATOS EN LA MEMORIA- JAVA",
+    institution: "SENA",
+    year: "2023",
+    description: "Aprender a crear aplicaciones Java que almacenan y manipulan datos en la memoria principal del computador, mejorando el rendimiento de la aplicación.",
+    modality: "Virtual",
+    pdfUrl: "../pdf/DESARROLLO DE APLICACIONES CON MANEJO DE DATOS EN LA MEMORIA- JAVA.pdf",
+  },
+  {
+    name: "MANEJO DE HERRAMIENTAS MICROSOFT OFFICE 2016_EXCEL",
+    institution: "SENA",
+    year: "2022",
+    description: "Manejo de Herramientas Microsoft Office 2016 Excel del SENA te proporciona las habilidades necesarias para dominar Excel 2016. Aprenderás a crear hojas de cálculo, utilizar fórmulas y funciones, generar gráficos y realizar muchas otras tareas útiles. Este curso es una herramienta invaluable para organizar, analizar y presentar datos de manera eficiente y efectiva.",
+    modality: "Virutal",
+    pdfUrl: "../pdf/MANEJO DE HERRAMIENTAS MICROSOFT OFFICE 2016_EXCEL.pdf",
+  },
+  {
+    name: "Nombre del Certificado o Curso 1",
+    institution: "Nombre de la Institución 1",
+    year: "Año de Obtención 1",
+    description: "Descripción breve del certificado o curso 1 y su relevancia.",
+    modality: "Modalidad del curso (presencial, virtual, semipresencial, etc.)",
+    pdfUrl: "../pdf/TecnicoSistema.pdf"
+  },
+  // Agrega más objetos para más certificados
+];
+
+const certificatesContainer = document.getElementById("CertificacionId");
+
+certificates.forEach(certificate => {
+  const certificateItem = document.createElement("div");
+  certificateItem.classList.add("certificate-item");
+
+  certificateItem.innerHTML = `
+    <h2 style="text-align: center;">${certificate.name}</h2>
+    <p><strong>Institución:</strong> ${certificate.institution}</p>
+    <p><strong>Año de Obtención:</strong> ${certificate.year}</p>
+    <p><strong>Descripción:</strong> ${certificate.description}</p>
+    <p><strong>Modalidad:</strong> ${certificate.modality}</p>
+    <button class="preview-button" onclick="openModal('${certificate.pdfUrl}')">Ver Certificado</button>
+  `;
+
+  certificatesContainer.appendChild(certificateItem);
+});
+
+function openModal(pdfUrl) {
+  var modal = document.getElementById("modal");
+  var pdfViewer = document.getElementById("pdf-viewer");
+  pdfViewer.src = pdfUrl;
+  modal.style.display = "block";
+}
+
+function closeModal() {
+  var modal = document.getElementById("modal");
+  modal.style.display = "none";
+}

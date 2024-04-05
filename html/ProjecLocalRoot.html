@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- footer -->
+    <div id="headerContainer"></div>
+    
+    <script>
+        // Cargar el contenido del header usando JavaScript
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('headerContainer').innerHTML = data;
+            });
+    </script>
+    <!-- fin footer -->
+    <a href="./Inicio.html">regresar</a>
+</body>
+</html>

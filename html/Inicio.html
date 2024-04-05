@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>Mi Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Plantillas HTML gratuitas">
+    <meta name="description" content="Plantillas HTML gratuitas">
+
+    <!-- Fuentes de Google -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css">
+
+    <!-- Hojas de estilo de las librerías -->
+    <link rel="stylesheet" href="lib/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="lib/lightbox/css/lightbox.min.css">
+
+    <!-- Hoja de estilo personalizada de Bootstrap -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="51">
+
+    <!-- footer -->
+    <div id="headerContainer"></div>
+    
+    <script>
+        // Cargar el contenido del header usando JavaScript
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('headerContainer').innerHTML = data;
+            });
+    </script>
+    <!-- fin footer -->
+    <!-- Acerca de -->
+
+    <div class="about-container">
+        <div>
+            <h1>Acerca de mí</h1>
+        </div>
+        <div class="about-content">
+
+            <img src="../img/about.jpg" alt="Imagen Acerca de">
+
+            <div>
+                <h3>Diseñador UI/UX y desarrollador web</h3>
+                <p>Como desarrollador junior apasionado por el mundo del desarrollo web, mi enfoque principal se
+                    encuentra en el
+                    backend, aunque también tengo experiencia en el desarrollo web en general. Soy proactivo, con
+                    habilidades para
+                    resolver problemas y aprender rápidamente, lo que me permite adaptarme fácilmente a nuevas
+                    tecnologías y
+                    entornos de trabajo. Mi compromiso con el crecimiento profesional y mi disposición para asumir
+                    nuevos retos me
+                    hacen ideal para integrarme en un equipo dinámico, donde pueda contribuir con mis habilidades y
+                    aprender de
+                    mis colegas en proyectos desafiantes y estimulantes. Estoy emocionado por la oportunidad de seguir
+                    creciendo
+                    como desarrollador y ser parte de un equipo que comparta mi pasión por la programación.</p>
+                <div class="informacion">
+                    <h6>Nombre: Brayan Stiven Barajas Ariza</h6>
+                    <h6>Ocupación: Estudiante</h6>
+                    <h6>Experiencia: Sin experiencia</h6>
+                    <h6>Teléfono: 3137539115</h6>
+                    <h6>Email: bstivenba@gmail.com</h6>
+                </div>
+
+            </div>
+        </div>
+        <a href="../pdf/Cv Brayan.pdf" class="download-link" download>Descargar CV</a>
+    </div>
+
+    <!-- Fin Acerca de -->
+
+
+    <!-- Educacion y experiencia -->
+    <div class="quality-container" id="qualification">
+        <div>
+            <h1>Educación & Experiencia</h1>
+        </div>
+        <div class="education-experience">
+            <div class="education">
+                <h3>Mi Educación</h3>
+                <div class="education-list">
+                    <div>
+                        <i class="fas fa-graduation-cap"></i>
+                        <h5>Ingeniería de Sistemas</h5>
+                        <p><strong>Universidad / Carrera Profesional</strong> | <small>2021 - 2025</small></p>
+                        <p><strong>Corporación Universitaria Adventista</strong> | <small>Medellín</small></p>
+                        <p>Actualmente me encuentro en formación en la carrera de Ingeniería de Sistemas, donde
+                            estoy adquiriendo conocimientos y habilidades en áreas como la programación, la arquitectura
+                            de software y la gestión de proyectos tecnológicos.</p>
+                    </div>
+                    <!-- Más entradas de educación aquí -->
+                </div>
+            </div>
+            <div class="experience">
+                <h3>Mi Experiencia</h3>
+                <div class="experience-list">
+                    <div>
+                        <i class="fas fa-briefcase"></i>
+                        <h5>Aún en Adquisición de Experiencia</h5>
+                        <p><strong>No tengo experiencias profesionales previas</strong></p>
+                        <p>Actualmente estoy en la etapa de adquisición de experiencia y buscando oportunidades para
+                            desarrollarme
+                            profesionalmente en el campo del diseño y desarrollo web. Estoy comprometido/a a aprender y
+                            crecer en mi
+                            carrera para alcanzar mis metas y contribuir de manera significativa en proyectos futuros.
+                        </p>
+                    </div>
+                    <!-- Otras entradas de experiencia aquí -->
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    <!-- Fin Calidad -->
+
+
+    <!-- Certificaciones y Cursos -->
+    <div class="certificates-section"  id="CertificacionesCursos">
+
+        
+        <h1>Mis cursos y certificados</h1>
+        <div class="certificates-container" id="CertificacionId">
+            <!-- Aquí se agregarán dinámicamente las certificaciones y cursos -->
+        </div>
+
+        <!-- Modal -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <iframe id="pdf-viewer" src="" frameborder="0"></iframe>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- Fin Certificaciones y Cursos -->
+
+
+    <!-- Habilidades -->
+    <div class="skills-container" id="miHabilidades">
+        <div>
+            <h1>Mis Habilidades</h1>
+        </div>
+        <div class="Skill">
+            <div>
+                <h3>Basic</h3>
+                <div class="skillImg">
+                    <span class="skillText">HTML</span>
+                    <img src="../img/HTML.svg" alt="">
+
+                </div>
+                <div class="skillImg">
+                    <span class="skillText">CSS</span>
+                    <img src="../img/CSS.svg" alt="">
+                </div>
+                <div class="skillImg">
+                    <span class="skillText">JavaScript</span>
+                    <img src="../img/javascript.svg" alt="">
+                </div>
+            </div>
+            <div>
+                <h3>Framework</h3>
+                <div class="skillImg">
+                    <span class="skillText">React</span>
+                    <img src="../img/React.svg" alt="">
+                </div>
+                <div class="skillImg">
+                    <span class="skillText">bootstrap</span>
+                    <img src="../img/bootstrap.svg" alt="">
+                </div>
+            </div>
+            <div>
+                <h3>Desig</h3>
+                <div class="skillImg">
+                    <span class="skillText">Figma</span>
+                    <img src="../img/Figma.svg" alt="">
+                </div>
+            </div>
+            <div>
+                <h3>Backend</h3>
+                <div class="skillImg">
+                    <span class="skillText">Node</span>
+                    <img src="../img/Node.svg" alt="">
+                </div>
+                <div class="skillImg">
+                    <span class="skillText">Java</span>
+                    <img src="../img/java.svg" alt="">
+                </div>
+            </div>
+            <div>
+                <h3>Extra</h3>
+                <div class="skillImg">
+                    <span class="skillText">Gitgub</span>
+                    <img src="../img/github.svg" alt="">
+                </div>
+                <div class="skillImg">
+                    <span class="skillText">Git</span>
+                    <img src="../img/Git.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fin Habilidades -->
+
+
+    <!-- Portafolio -->
+    <div class="Portafolio" id="Portafolio">
+        <h1 class="section-title">Portafolio</h1>
+        <div class="container-project">
+            <div class="project">
+                <h2>LocalRoot</h2>
+                <img src="../img/Logo.png " alt="Logo del Proyecto 1">
+                <p>Año de inicio: 2023</p>
+                <p>El proyecto se centra en respaldar la cultura local en Medellín, proporcionando una plataforma para
+                    eventos,
+                    lugares turísticos y tradiciones comunitarias.</p>
+                <a href="./ProjecLocalRoot.html">Ver acerca del Projecto</a>
+            </div>
+        </div>
+
+    </div>
+    <!-- Fin de portafolio -->
+
+
+
+    <!-- Intereses o Pasatiempos -->
+    <div class="interests-container" id="InteresesPasatiempos">
+        <h1>Intereses o Pasatiempos</h1>
+        <div class="interests-list">
+            <div class="interest">
+                <h3>Interés 1</h3>
+                <p>Descripción del primer interés o pasatiempo.</p>
+            </div>
+            <div class="interest">
+                <h3>Interés 2</h3>
+                <p>Descripción del segundo interés o pasatiempo.</p>
+            </div>
+            <!-- Agregar más intereses o pasatiempos según sea necesario -->
+        </div>
+    </div>
+    <!-- Fin Intereses o Pasatiempos -->
+
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <div class="social-links">
+            <a href="https://www.facebook.com/brayan.barajas.31/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com/BRAYANS33862840" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/stiven.ba/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/brayan-stiven-barajas-ariza-9ab79b235/" target="_blank"><i
+                    class="fab fa-linkedin-in"></i></a>
+        </div>
+
+        <div class="footer-info">
+            <p>&copy; <a href="#" class="font-weight-bold">Domain Name</a>. All Rights Reserved. Designed by <a
+                    href="https://htmlcodex.com" class="font-weight-bold">HTML Codex</a></p>
+        </div>
+    </footer>
+
+    <!-- Footer End -->
+
+</body>
+<script src="../js/skill.js"></script>
+
+</html>
