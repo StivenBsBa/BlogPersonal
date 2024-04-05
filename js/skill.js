@@ -45,10 +45,10 @@ const certificates = [
     pdfUrl: "../pdf/MANEJO DE HERRAMIENTAS MICROSOFT OFFICE 2016_EXCEL.pdf",
   },
   {
-    name: "Nombre del Certificado o Curso 1",
-    institution: "Nombre de la Institución 1",
-    year: "Año de Obtención 1",
-    description: "Descripción breve del certificado o curso 1 y su relevancia.",
+    name: "Tecnico en sistema",
+    institution: "Sena",
+    year: "2019",
+    description: "Curso enfoca en mantener, brindar soporte y gestionar sistemas informáticos para asegurarse de que funcionen correctamente y de manera segura",
     modality: "Modalidad del curso (presencial, virtual, semipresencial, etc.)",
     pdfUrl: "../pdf/TecnicoSistema.pdf"
   },
