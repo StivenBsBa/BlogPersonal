@@ -30,7 +30,7 @@
     
     <script>
         // Cargar el contenido del header usando JavaScript
-        fetch('header.html')
+        fetch('./header.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('headerContainer').innerHTML = data;
