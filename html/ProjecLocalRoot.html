@@ -1,23 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <title>LocatRoot</title>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../css/projectLocalRoot.css">
+
 </head>
-<body>
-    <!-- footer -->
+
+<body data-spy="scroll" data-target=".navbar" data-offset="51">
+    <!-- Encabezado -->
     <div id="headerContainer"></div>
-    
+
+    <div class="regresar">
+        <a href="./Inicio.html">regresar</a>
+    </div>
+    <div id="footerContainer"></div>
+
     <script>
-        // Cargar el contenido del header usando JavaScript
-        fetch('./Header.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('headerContainer').innerHTML = data;
-            });
+        document.addEventListener('DOMContentLoaded', function () {
+            Promise.all([
+                fetch('./Header.html').then(response => response.text()),
+                fetch('./Footer.html').then(response => response.text())
+            ])
+                .then(([headerData, footerData]) => {
+                    document.getElementById('headerContainer').innerHTML = headerData;
+                    document.getElementById('footerContainer').innerHTML = footerData;
+                    const script = document.createElement('script');
+                    script.src = '../js/skill.js';
+                    document.body.appendChild(script);
+                })
+                .catch(error => console.error('Error fetching components:', error));
+        });
     </script>
-    <!-- fin footer -->
-    <a href="./Inicio.html">regresar</a>
+
 </body>
+
 </html>

@@ -5,19 +5,10 @@
     <meta charset="utf-8">
     <title>Mi Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="Plantillas HTML gratuitas">
-    <meta name="description" content="Plantillas HTML gratuitas">
-
+  
     <!-- Fuentes de Google -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css">
-
-    <!-- Hojas de estilo de las librerías -->
-    <link rel="stylesheet" href="lib/owlcarousel/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="lib/lightbox/css/lightbox.min.css">
 
     <!-- Hoja de estilo personalizada de Bootstrap -->
     <link rel="stylesheet" href="../css/style.css">
@@ -25,18 +16,11 @@
 
 <body data-spy="scroll" data-target=".navbar" data-offset="51">
 
-    <!-- footer -->
+    <!-- Header -->
     <div id="headerContainer"></div>
-    
-    <script>
-        // Cargar el contenido del header usando JavaScript
-        fetch('./Header.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('headerContainer').innerHTML = data;
-            });
-    </script>
-    <!-- fin footer -->
+
+
+    <!-- fin Header -->
     <!-- Acerca de -->
 
     <div class="about-container">
@@ -124,9 +108,9 @@
 
 
     <!-- Certificaciones y Cursos -->
-    <div class="certificates-section"  id="CertificacionesCursos">
+    <div class="certificates-section" id="CertificacionesCursos">
 
-        
+
         <h1>Mis cursos y certificados</h1>
         <div class="certificates-container" id="CertificacionId">
             <!-- Aquí se agregarán dinámicamente las certificaciones y cursos -->
@@ -249,25 +233,26 @@
     </div>
     <!-- Fin Intereses o Pasatiempos -->
 
+    <!-- Footer de página -->
+    <div id="footerContainer"></div>
 
-    <!-- Pie de página -->
-    <footer class="footer">
-        <div class="social-links">
-            <a href="https://www.facebook.com/brayan.barajas.31/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://twitter.com/BRAYANS33862840" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.instagram.com/stiven.ba/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/in/brayan-stiven-barajas-ariza-9ab79b235/" target="_blank"><i
-                    class="fab fa-linkedin-in"></i></a>
-        </div>
 
-        <div class="footer-info">
-            <p>&copy; <a href="#" class="font-weight-bold">Domain Name</a>. All Rights Reserved. Designed by <a
-                    href="https://htmlcodex.com" class="font-weight-bold">HTML Codex</a></p>
-        </div>
-    </footer>
-
-    <!-- Footer End -->
-
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            Promise.all([
+                fetch('./Header.html').then(response => response.text()),
+                fetch('./Footer.html').then(response => response.text())
+            ])
+                .then(([headerData, footerData]) => {
+                    document.getElementById('headerContainer').innerHTML = headerData;
+                    document.getElementById('footerContainer').innerHTML = footerData;
+                    const script = document.createElement('script');
+                    script.src = '../js/skill.js';
+                    document.body.appendChild(script);
+                })
+                .catch(error => console.error('Error fetching components:', error));
+        });
+    </script>
     <script src="../js/skill.js"></script>
 </body>
 

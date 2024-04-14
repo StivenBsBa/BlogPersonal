@@ -1,27 +1,28 @@
-document.addEventListener("DOMContentLoaded", function() {
+
+window.onload = function() {
   const menuToggle = document.querySelector('.menu-toggle');
   const navLinks = document.querySelector('.nav-links');
+  const navItems = document.querySelectorAll('.nav-links li a');
 
   menuToggle.addEventListener('click', function() {
     navLinks.classList.toggle('active');
     menuToggle.classList.toggle('active');
+    
+    // Verificar si el texto del enlace excede el ancho del contenedor después de hacer clic en el botón de menú
+    navItems.forEach(item => {
+      if (item.offsetWidth > navLinks.offsetWidth) {
+        item.style.display = 'none';
+      }
+    });
   });
-
-  const navItems = document.querySelectorAll('.nav-links li a');
 
   navItems.forEach(item => {
     item.addEventListener('click', function() {
       navLinks.classList.remove('active');
       menuToggle.classList.remove('active');
     });
-
-    // Verificar si el texto del enlace excede el ancho del contenedor
-    if (item.offsetWidth > navLinks.offsetWidth) {
-      item.style.display = 'none';
-    }
   });
-});
-
+};
 
 
 
