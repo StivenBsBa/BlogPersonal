@@ -1,14 +1,13 @@
-:root{
-  --dezpla:60px;
+:root {
+  --dezpla: 60px;
 }
 /* Estilos generales */
 body {
-  
   font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #f0f4f8;
 }
-
 
 /* Estilos para la sección Acerca de mí */
 .about-container {
@@ -81,7 +80,6 @@ body {
 /* Estilos para Educación y Experiencia */
 .quality-container {
   padding: var(--dezpla) 20px 0 20px;
-
 }
 
 .quality-container > div {
@@ -164,9 +162,8 @@ body {
 }
 
 /* Estilos para Certificaciones y Cursos */
-.certificates-section{
+.certificates-section {
   padding-top: var(--dezpla);
-
 }
 .certificates-section h1 {
   font-size: 2em;
@@ -268,7 +265,6 @@ p {
   padding-top: var(--dezpla);
   font-size: 24px;
   color: #333;
-
 }
 
 .Skill {
@@ -302,9 +298,8 @@ p {
 }
 
 /* Stilos para la seccionde proyectos */
-.Portafolio{
+.Portafolio {
   padding-top: 50px;
-
 }
 .container-project {
   display: grid;
@@ -338,42 +333,55 @@ p {
 }
 
 .project a:hover {
-  text-decoration:underline;
+  text-decoration: underline;
 }
 
 /* Estilos para Intereses o Pasatiempos */
+
 .interests-container {
-  margin-top: 50px;
+  padding-top: 50px;
+  margin: 0 40px 20px 40px;
 }
 
+/* Título de la sección de intereses */
 .interests-container h1 {
-  font-size: 24px;
+  font-size: 32px;
   color: #333;
+  text-align: center;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave para resaltar el título */
 }
 
+/* Lista de intereses */
 .interests-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
 }
 
+/* Cada interés individual */
 .interest {
-  background-color: #f9f9f9;
-  padding: 20px;
-  border-radius: 8px;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Título del interés */
 .interest h3 {
-  font-size: 18px;
+  text-align: center;
+  font-size: 24px;
   color: #555;
+  margin-bottom: 20px;
 }
 
+/* Descripción del interés */
 .interest p {
-  margin-top: 10px;
-  font-size: 14px;
+  text-align: justify;
+  font-size: 16px;
   color: #777;
+  line-height: 1.6;
 }
-
-
 
 @media screen and (max-width: 700px) {
   .about-content {
