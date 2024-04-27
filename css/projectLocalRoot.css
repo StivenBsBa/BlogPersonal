@@ -2,7 +2,62 @@ body {
   font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #f4f4f4; /* Color de fondo */
 }
-.regresar {
-  margin: 100px;
+
+h1 {
+  margin-top: 80px;
+  text-align: center;
+  color: #333; /* Color del texto */
+  font-size: 28px; /* Tamaño del texto */
+  margin-bottom: 30px; /* Espacio inferior */
+  text-transform: uppercase; /* Convertir a mayúsculas */
+  letter-spacing: 2px; /* Espaciado entre letras */
+}
+h2 {
+  color: #333; /* Color del texto */
+  font-size: 24px; /* Tamaño del texto */
+  margin-bottom: 20px; /* Espacio inferior */
+  text-align: center;
+}
+
+p {
+  text-align: justify;
+  color: #313131; 
+  line-height: 1.6; 
+}
+
+section {
+  margin: 0 auto;
+  max-width: 90%; 
+  background-color: #fff; 
+  padding: 30px;
+  border-radius: 8px; 
+  margin-bottom: 40px; 
+}
+
+
+li {
+  margin-bottom: 10px; /* Espacio inferior */
+}
+
+
+.button {
+  position: fixed;
+  top: 80px; /* Margen superior */
+  right: 10px; /* Margen derecho */
+  background-color: #4CAF50; /* Color de fondo */
+  color: white; /* Color del texto */
+  padding: 10px 20px; /* Espacio interior */
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px; /* Tamaño del texto */
+  border-radius: 5px; /* Borde redondeado */
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Transición suave */
+}
+
+.button:hover {
+  background-color: #87a87d; /* Color de fondo al pasar el mouse */
 }

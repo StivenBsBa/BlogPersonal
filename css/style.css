@@ -171,7 +171,7 @@ body {
 }
 .certificates-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 20px));
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   gap: 20px;
   padding: 20px;
   justify-content: center;
@@ -269,7 +269,7 @@ p {
 
 .Skill {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 10px));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 20px;
   padding: 20px;
   justify-content: center;
@@ -303,11 +303,13 @@ p {
 }
 .container-project {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 10px));
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   gap: 20px;
   padding: 20px;
   justify-content: center;
+  align-self: center;
 }
+
 .project {
   background-color: #f9f9f9;
   padding: 20px;
@@ -343,23 +345,22 @@ p {
   margin: 0 40px 20px 40px;
 }
 
-/* Título de la sección de intereses */
 .interests-container h1 {
   font-size: 32px;
   color: #333;
   text-align: center;
   margin-bottom: 30px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave para resaltar el título */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Lista de intereses */
 .interests-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
+  padding: 20px;
+  justify-content: center;
 }
 
-/* Cada interés individual */
 .interest {
   background-color: #ffffff;
   padding: 30px;
@@ -367,7 +368,6 @@ p {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Título del interés */
 .interest h3 {
   text-align: center;
   font-size: 24px;
@@ -375,7 +375,6 @@ p {
   margin-bottom: 20px;
 }
 
-/* Descripción del interés */
 .interest p {
   text-align: justify;
   font-size: 16px;
