@@ -134,6 +134,8 @@ body {
 
 .footer-info {
   margin-top: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 .footer-info p {
@@ -141,8 +143,8 @@ body {
   font-size: 16px;
 }
 
-.footer-info p a {
-  color: #fff;
+.footer-info p  {
+  color: #dddddd;
   text-decoration: none;
   transition: color 0.3s ease;
 }
