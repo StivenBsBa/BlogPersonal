@@ -152,3 +152,6 @@ body {
 .footer-info p a:hover {
   color: var(--footer-link-hover-color);
 }
+.social-links img {
+  width: 30px;
+}

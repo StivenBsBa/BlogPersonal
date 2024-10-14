@@ -121,13 +121,26 @@
     <div id="footer"></div>
 
     <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            Promise.all([
+                fetch('./Header.html').then(response => response.text()),
+                fetch('./Footer.html').then(response => response.text())
+            ])
+                .then(([headerData, footerData]) => {
+                    document.getElementById('header').innerHTML = headerData;
+                    document.getElementById('footer').innerHTML = footerData;
+                    const script = document.createElement('script');
+                    script.src = '../js/skill.js';
+                    document.body.appendChild(script);
+                })
+                .catch(error => console.error('Error fetching components:', error));
+        });
         // Cargar el header
         fetch('header.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('header').innerHTML = data;
             });
-
         // Cargar el footer
         fetch('footer.html')
             .then(response => response.text())
