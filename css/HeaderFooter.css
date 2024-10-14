@@ -1,24 +1,36 @@
+:root {
+  --font-family: "Roboto", sans-serif;
+  --navbar-bg-color: #333;
+  --navbar-link-color: #fff;
+  --navbar-link-hover-bg-color: #555;
+  --footer-bg-color: #333;
+  --footer-text-color: #fff;
+  --footer-link-hover-color: #007bff;
+  --transition-duration: 0.3s;
+}
+
 /* Estilos generales */
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: var(--font-family);
   margin: 0;
   padding: 0;
 }
 
 .navbar {
-  background-color: #333;
+  background-color: var(--navbar-bg-color);
   overflow: hidden;
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 1000; /* Asegura que la barra de navegación esté por encima de otros elementos */
 }
 
 .navbar .logo {
   float: left;
   display: block;
-  padding: 20px 20px;
+  padding: 20px;
   text-decoration: none;
-  color: #fff;
+  color: var(--navbar-link-color);
 }
 
 .navbar .logo h1 {
@@ -43,37 +55,38 @@ body {
 
 .navbar .nav-links li a {
   display: block;
-  color: #fff;
+  color: var(--navbar-link-color);
   text-align: center;
-  padding: 20px 20px;
+  padding: 20px;
   text-decoration: none;
+  transition: background-color var(--transition-duration);
 }
 
 .navbar .nav-links li a:hover {
-  background-color: #555;
+  background-color: var(--navbar-link-hover-bg-color);
 }
 
 .menu-toggle {
-  display: none;
+  display: none; /* Ocultar por defecto en pantallas grandes */
 }
 
 .menu-toggle .bar {
   width: 25px;
   height: 3px;
-  background-color: #fff;
+  background-color: var(--navbar-link-color);
   margin: 5px 0;
   transition: 0.4s;
 }
 
 @media screen and (max-width: 600px) {
   .navbar .nav-links {
-    display: none;
+    display: none; /* Oculta el menú por defecto */
     width: 100%;
     text-align: center;
   }
 
   .navbar .nav-links.active {
-    display: block;
+    display: block; /* Muestra el menú cuando está activo */
   }
 
   .navbar .nav-links.active li {
@@ -82,11 +95,10 @@ body {
   }
 
   .menu-toggle {
-    display: block;
+    display: block; /* Muestra el botón de menú en pantallas pequeñas */
     cursor: pointer;
     float: right;
-    padding-top: 10px;
-    padding-right: 20px;
+    padding: 10px 20px;
   }
 
   .menu-toggle.active .bar:nth-child(1) {
@@ -101,56 +113,42 @@ body {
     transform: rotate(45deg) translate(-5px, -6px);
   }
 }
+
 /* Estilos para el pie de página */
 .footer {
-  background-color: #333;
-  color: #fff;
+  background-color: var(--footer-bg-color);
+  color: var(--footer-text-color);
   padding: 40px 0;
   text-align: center;
   font-family: Arial, sans-serif;
 }
 
+.social-links {
+  margin-bottom: 20px; /* Espacio entre los enlaces sociales y el texto */
+}
+
 .social-links a {
-  color: #fff;
+  color: var(--footer-text-color);
   text-decoration: none;
-  margin-right: 20px;
-  transition: color 0.3s ease;
+  margin: 0 10px; /* Espaciado uniforme entre iconos */
+  transition: color var(--transition-duration);
 }
 
 .social-links a:hover {
-  color: #007bff;
-}
-
-.footer-links a {
-  color: #fff;
-  text-decoration: none;
-  margin: 0 10px;
-  transition: color 0.3s ease;
-}
-
-.footer-links a:hover {
-  color: #007bff;
+  color: var(--footer-link-hover-color);
 }
 
 .footer-info {
   margin-top: 20px;
-  display: flex;
-  justify-content: center;
 }
 
 .footer-info p {
   margin: 0;
   font-size: 16px;
-}
-
-.footer-info p  {
   color: #dddddd;
-  text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color var(--transition-duration);
 }
 
 .footer-info p a:hover {
-  color: #007bff;
+  color: var(--footer-link-hover-color);
 }
-
-

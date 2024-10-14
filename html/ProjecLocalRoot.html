@@ -7,14 +7,15 @@
     <link rel="icon" href="../img/userblog.jpg" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/projectLocalRoot.css">
+    <script src="../js/header.js" defer></script>
 
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="51">
     <!-- Encabezado -->
-    <div id="headerContainer"></div>
+    <div id="header"></div>
     <a href="#" class="button">Ir a la página</a>
-    
+
     <div>
         <h1>Localroot - Explora Medellín</h1>
 
@@ -117,23 +118,22 @@
 
 
 
-    <div id="footerContainer"></div>
+    <div id="footer"></div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            Promise.all([
-                fetch('./Header.html').then(response => response.text()),
-                fetch('./Footer.html').then(response => response.text())
-            ])
-                .then(([headerData, footerData]) => {
-                    document.getElementById('headerContainer').innerHTML = headerData;
-                    document.getElementById('footerContainer').innerHTML = footerData;
-                    const script = document.createElement('script');
-                    script.src = '../js/skill.js';
-                    document.body.appendChild(script);
-                })
-                .catch(error => console.error('Error fetching components:', error));
-        });
+        // Cargar el header
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
+
+        // Cargar el footer
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
     </script>
 
 </body>

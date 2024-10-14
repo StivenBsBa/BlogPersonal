@@ -6,21 +6,18 @@
     <title>Mi Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../img/userblog.jpg" type="image/x-icon">
-    <!-- Fuentes de Google -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    <!-- Hoja de estilo personalizada de Bootstrap -->
+
     <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/skill.js" defer></script>
+    <script src="../js/header.js" defer></script>
+
+
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="51">
 
     <!-- Header -->
-    <div id="headerContainer"></div>
-
-
-    <!-- fin Header -->
-    <!-- Acerca de -->
+    <div id="header"></div>
 
     <div class="about-container">
         <div>
@@ -57,9 +54,6 @@
         </div>
         <a href="../pdf/Cv Brayan.pdf" class="download-link" download>Descargar CV</a>
     </div>
-
-    <!-- Fin Acerca de -->
-
 
     <!-- Educacion y experiencia -->
     <div class="quality-container" id="qualification">
@@ -103,30 +97,12 @@
         </div>
     </div>
     </div>
-    <!-- Fin Calidad -->
-
 
     <!-- Certificaciones y Cursos -->
     <div class="certificates-section" id="CertificacionesCursos">
-
-
         <h1>Mis cursos y certificados</h1>
-        <div class="certificates-container" id="CertificacionId">
-            <!-- Aquí se agregarán dinámicamente las certificaciones y cursos -->
-        </div>
-
-        <!-- Modal -->
-        <div id="modal" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal()">&times;</span>
-                <iframe id="pdf-viewer" src="" frameborder="0"></iframe>
-            </div>
-
-        </div>
-
+        <div class="certificates-container" id="CertificacionId"></div>
     </div>
-    <!-- Fin Certificaciones y Cursos -->
-
 
     <!-- Habilidades -->
     <div class="skills-container" id="miHabilidades">
@@ -135,7 +111,7 @@
         </div>
         <div class="Skill">
             <div>
-                <h3>Basic</h3>
+                <h3>Desarrollo Web</h3>
                 <div class="skillImg">
                     <span class="skillText">HTML</span>
                     <img src="../img/HTML.svg" alt="">
@@ -149,9 +125,6 @@
                     <span class="skillText">JavaScript</span>
                     <img src="../img/javascript.svg" alt="">
                 </div>
-            </div>
-            <div>
-                <h3>Framework</h3>
                 <div class="skillImg">
                     <span class="skillText">React</span>
                     <img src="../img/React.svg" alt="">
@@ -161,15 +134,17 @@
                     <img src="../img/bootstrap.svg" alt="">
                 </div>
             </div>
+
             <div>
-                <h3>Desig</h3>
+                <h3>Diseño</h3>
                 <div class="skillImg">
                     <span class="skillText">Figma</span>
                     <img src="../img/Figma.svg" alt="">
                 </div>
             </div>
+
             <div>
-                <h3>Backend</h3>
+                <h3>Desarollo Backend</h3>
                 <div class="skillImg">
                     <span class="skillText">Node</span>
                     <img src="../img/node.svg" alt="">
@@ -178,7 +153,19 @@
                     <span class="skillText">Java</span>
                     <img src="../img/java.svg" alt="">
                 </div>
+                <div class="skillImg">
+                    <span class="skillText">Python</span>
+                    <img src="../img/Python.svg" alt="">
+                </div>
             </div>
+            <div>
+                <h3>Bases de datos</h3>
+                <div class="skillImg">
+                    <span class="skillText">SQL</span>
+                    <img src="../img/SQL.svg" alt="">
+                </div>
+            </div>
+
             <div>
                 <h3>Extra</h3>
                 <div class="skillImg">
@@ -189,11 +176,14 @@
                     <span class="skillText">Git</span>
                     <img src="../img/Git.svg" alt="">
                 </div>
+                <div class="skillImg">
+                    <span class="skillText">Power BI</span>
+                    <img src="../img/PowerBI.svg" alt="">
+                </div>
             </div>
+
         </div>
     </div>
-    <!-- Fin Habilidades -->
-
 
     <!-- Portafolio -->
     <div class="Portafolio" id="Portafolio">
@@ -211,69 +201,76 @@
         </div>
 
     </div>
-    <!-- Fin de portafolio -->
-
-
 
     <!-- Intereses o Pasatiempos -->
-<div class="interests-container" id="InteresesPasatiempos">
-    <h1>Intereses o Pasatiempos</h1>
-    <div class="interests-list">
-        <!-- Videojuegos -->
-        <div class="interest">
-            <h3>Videojuegos</h3>
-            <p>Sumergirme en mundos virtuales llenos de aventuras y desafíos me apasiona. Desde explorar vastas tierras hasta competir en emocionantes batallas, los videojuegos son una fuente inagotable de entretenimiento y diversión para mí.</p>
-        </div>
-        <!-- Anime -->
-        <div class="interest">
-            <h3>Anime</h3>
-            <p>El mundo del anime me fascina por sus historias profundas, personajes memorables y su capacidad para transmitir emociones de manera única. Desde épicas sagas de fantasía hasta conmovedoras historias de la vida cotidiana, encuentro inspiración y entretenimiento en cada serie que descubro.</p>
-        </div>
-        <!-- Lectura -->
-        <div class="interest">
-            <h3>Lectura</h3>
-            <p>Recientemente, he comenzado a explorar el mundo de la lectura y estoy descubriendo un placer sin igual en sumergirme en libros que me transportan a mundos desconocidos y me invitan a reflexionar sobre diferentes aspectos de la vida. Cada página es una nueva aventura y una oportunidad para expandir mi horizonte intelectual.</p>
-        </div>
-        <!-- Música -->
-        <div class="interest">
-            <h3>Música</h3>
-            <p>La música es una parte esencial de mi vida, ya que me acompaña en cada momento y me permite conectar con diferentes emociones y estados de ánimo. Desde melodías tranquilas que me relajan hasta ritmos enérgicos que me motivan, siempre encuentro inspiración y confort en la música.</p>
-        </div>
-        <!-- Salir a conocer lugares -->
-        <div class="interest">
-            <h3>Salir a conocer lugares</h3>
-            <p>Explorar el mundo y descubrir nuevos lugares es una de mis actividades favoritas. Ya sea caminando por senderos naturales, explorando museos o simplemente paseando por las calles de una ciudad desconocida, cada aventura me brinda nuevas experiencias y recuerdos inolvidables.</p>
-        </div>
-        <!-- Conocer nuevas personas -->
-        <div class="interest">
-            <h3>Conocer nuevas personas</h3>
-            <p>Me apasiona interactuar con personas de diferentes culturas, antecedentes y perspectivas. Cada encuentro es una oportunidad para aprender algo nuevo, compartir experiencias y establecer conexiones significativas que enriquecen mi vida personal y profesional.</p>
+    <div class="interests-container" id="InteresesPasatiempos">
+        <h1>Intereses o Pasatiempos</h1>
+        <div class="interests-list">
+            <!-- Videojuegos -->
+            <div class="interest">
+                <h3>Videojuegos</h3>
+                <p>Sumergirme en mundos virtuales llenos de aventuras y desafíos me apasiona. Desde explorar vastas
+                    tierras hasta competir en emocionantes batallas, los videojuegos son una fuente inagotable de
+                    entretenimiento y diversión para mí.</p>
+            </div>
+            <!-- Anime -->
+            <div class="interest">
+                <h3>Anime</h3>
+                <p>El mundo del anime me fascina por sus historias profundas, personajes memorables y su capacidad para
+                    transmitir emociones de manera única. Desde épicas sagas de fantasía hasta conmovedoras historias de
+                    la vida cotidiana, encuentro inspiración y entretenimiento en cada serie que descubro.</p>
+            </div>
+            <!-- Lectura -->
+            <div class="interest">
+                <h3>Lectura</h3>
+                <p>Recientemente, he comenzado a explorar el mundo de la lectura y estoy descubriendo un placer sin
+                    igual en sumergirme en libros que me transportan a mundos desconocidos y me invitan a reflexionar
+                    sobre diferentes aspectos de la vida. Cada página es una nueva aventura y una oportunidad para
+                    expandir mi horizonte intelectual.</p>
+            </div>
+            <!-- Música -->
+            <div class="interest">
+                <h3>Música</h3>
+                <p>La música es una parte esencial de mi vida, ya que me acompaña en cada momento y me permite conectar
+                    con diferentes emociones y estados de ánimo. Desde melodías tranquilas que me relajan hasta ritmos
+                    enérgicos que me motivan, siempre encuentro inspiración y confort en la música.</p>
+            </div>
+            <!-- Salir a conocer lugares -->
+            <div class="interest">
+                <h3>Salir a conocer lugares</h3>
+                <p>Explorar el mundo y descubrir nuevos lugares es una de mis actividades favoritas. Ya sea caminando
+                    por senderos naturales, explorando museos o simplemente paseando por las calles de una ciudad
+                    desconocida, cada aventura me brinda nuevas experiencias y recuerdos inolvidables.</p>
+            </div>
+            <!-- Conocer nuevas personas -->
+            <div class="interest">
+                <h3>Conocer nuevas personas</h3>
+                <p>Me apasiona interactuar con personas de diferentes culturas, antecedentes y perspectivas. Cada
+                    encuentro es una oportunidad para aprender algo nuevo, compartir experiencias y establecer
+                    conexiones significativas que enriquecen mi vida personal y profesional.</p>
+            </div>
         </div>
     </div>
-</div>
-<!-- Fin Intereses o Pasatiempos -->
 
     <!-- Footer de página -->
-    <div id="footerContainer"></div>
-
-
+    <div id="footer"></div>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            Promise.all([
-                fetch('./Header.html').then(response => response.text()),
-                fetch('./Footer.html').then(response => response.text())
-            ])
-                .then(([headerData, footerData]) => {
-                    document.getElementById('headerContainer').innerHTML = headerData;
-                    document.getElementById('footerContainer').innerHTML = footerData;
-                    const script = document.createElement('script');
-                    script.src = '../js/skill.js';
-                    document.body.appendChild(script);
-                })
-                .catch(error => console.error('Error fetching components:', error));
-        });
+        // Cargar el header
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
+
+        // Cargar el footer
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
     </script>
-    <script src="../js/skill.js"></script>
+
+
 </body>
 
 </html>
